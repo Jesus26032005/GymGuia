@@ -1,0 +1,13 @@
+*.iml
+.gradle/
+build/
+local.properties
+.idea/
+.kotlin/
+*.apk
+tools/.venv/
+tools/progreso/revision.tsv
+tools/**/__pycache__/
+
+# Capturas de pantalla de pruebas
+capturas/

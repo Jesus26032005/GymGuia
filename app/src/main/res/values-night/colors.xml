@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ventana_fondo">#FF111416</color>
+    <color name="demo_fondo">#FF262C2F</color>
+    <color name="demo_figura">#FFBFC8C9</color>
+    <color name="demo_acento">#FF7FD1CB</color>
+</resources>

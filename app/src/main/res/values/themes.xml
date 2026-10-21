@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema de ventana mínimo: el diseño real vive en ui/theme (Compose). -->
+    <style name="Theme.GymGuia" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/ventana_fondo</item>
+    </style>
+</resources>

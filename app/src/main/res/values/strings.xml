@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General -->
+    <string name="app_nombre">Gym Guía</string>
+    <string name="ejemplo_contenido">Contenido de la pantalla</string>
+
+    <!-- Carga inicial del catálogo -->
+    <string name="carga_titulo">Preparando el catálogo</string>
+    <string name="carga_mensaje">Esto solo ocurre la primera vez que abres la app.</string>
+    <string name="carga_porcentaje">%1$d %%</string>
+    <string name="carga_error_titulo">No se pudo cargar el catálogo</string>
+    <string name="carga_error_mensaje">Cierra la app e inténtalo de nuevo. Si el problema continúa, reinstálala.</string>
+    <string name="accion_reintentar">Reintentar</string>
+
+    <!-- Navegación inferior -->
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_ejercicios">Ejercicios</string>
+    <string name="nav_progreso">Progreso</string>
+    <string name="nav_ajustes">Ajustes</string>
+
+    <!-- Títulos de pantalla -->
+    <string name="titulo_ejercicios">Ejercicios</string>
+    <string name="titulo_favoritos">Favoritos</string>
+    <string name="titulo_progreso">Calendario y progreso</string>
+    <string name="titulo_ajustes">Ajustes</string>
+    <string name="titulo_records">Récords personales</string>
+
+    <!-- Acciones -->
+    <string name="accion_atras">Volver</string>
+    <string name="accion_agregar_favorito">Agregar a favoritos</string>
+    <string name="accion_quitar_favorito">Quitar de favoritos</string>
+    <string name="accion_limpiar_busqueda">Limpiar búsqueda</string>
+    <string name="accion_limpiar_filtros">Quitar filtros</string>
+    <string name="accion_agregar_serie">Agregar serie</string>
+    <string name="accion_iniciar_descanso">Descanso</string>
+    <string name="accion_eliminar_serie">Eliminar serie %1$d</string>
+    <string name="accion_sumar">Aumentar %1$s</string>
+    <string name="accion_restar">Disminuir %1$s</string>
+    <string name="accion_mostrar">Mostrar</string>
+    <string name="accion_ocultar">Ocultar</string>
+
+    <!-- Búsqueda y filtros -->
+    <string name="busqueda_placeholder">Buscar ejercicio</string>
+    <string name="filtro_musculo">Músculo</string>
+    <string name="filtro_equipo">Equipo</string>
+    <string name="filtro_nivel">Nivel</string>
+
+    <!-- Inicio -->
+    <string name="inicio_saludo">¿Qué vas a entrenar hoy?</string>
+    <string name="inicio_grupos_musculares">Grupos musculares</string>
+    <string name="inicio_sugeridos">Sugeridos</string>
+
+    <!-- Niveles -->
+    <string name="nivel_principiante">Principiante</string>
+    <string name="nivel_intermedio">Intermedio</string>
+    <string name="nivel_avanzado">Avanzado</string>
+
+    <!-- Detalle -->
+    <string name="detalle_demo_descripcion">Demostración de %1$s</string>
+    <string name="detalle_musculos_primarios">Músculos principales</string>
+    <string name="detalle_musculos_secundarios">Músculos secundarios</string>
+    <string name="detalle_equipo">Equipo</string>
+    <string name="detalle_categoria">Categoría</string>
+    <string name="detalle_no_encontrado_titulo">Ejercicio no encontrado</string>
+    <string name="detalle_no_encontrado_mensaje">Este ejercicio ya no está en el catálogo.</string>
+    <string name="equipo_ninguno">Sin equipo</string>
+    <string name="detalle_nivel">Nivel</string>
+    <string name="detalle_ninguno">Ninguno</string>
+    <string name="detalle_instrucciones">Instrucciones</string>
+    <string name="detalle_mis_series_hoy">Mis series de hoy</string>
+    <string name="detalle_ultima_vez">Última vez</string>
+    <string name="detalle_sin_registros_previos">Sin registros anteriores</string>
+
+    <!-- Series -->
+    <string name="serie_numero">Serie %1$d</string>
+    <string name="serie_marcar_completada">Marcar como completada</string>
+    <string name="serie_marcar_pendiente">Marcar como pendiente</string>
+    <string name="etiqueta_peso">Peso (%1$s)</string>
+    <string name="etiqueta_repeticiones">Repeticiones</string>
+
+    <!-- Temporizador: avisos y permiso -->
+    <string name="canal_en_curso">Descanso en curso</string>
+    <string name="canal_fin">Aviso de descanso terminado</string>
+    <string name="aviso_fin_titulo">Descanso terminado</string>
+    <string name="aviso_fin_mensaje">Es hora de tu siguiente serie.</string>
+    <string name="permiso_notificaciones_titulo">Avisarte al terminar el descanso</string>
+    <string name="permiso_notificaciones_mensaje">Para avisarte cuando termine el descanso con la app en segundo plano, Gym Guía necesita permiso para mostrar notificaciones. Solo se usan para este aviso.</string>
+    <string name="accion_permitir">Permitir</string>
+    <string name="accion_ahora_no">Ahora no</string>
+    <string name="accion_iniciar">Iniciar</string>
+    <string name="serie_completada_oferta">Serie completada. ¿Descansar %1$s?</string>
+
+    <!-- Mapa muscular y visor de imágenes -->
+    <string name="mapa_titulo">Músculos trabajados</string>
+    <string name="mapa_frente">Frente</string>
+    <string name="mapa_espalda">Espalda</string>
+    <string name="mapa_leyenda_principal">Principal</string>
+    <string name="mapa_leyenda_secundario">Secundario</string>
+    <string name="mapa_descripcion">Mapa muscular. Principales: %1$s. Secundarios: %2$s.</string>
+    <string name="mapa_ninguno">ninguno</string>
+    <string name="demo_animacion">Animación</string>
+    <string name="demo_fotos">Fotos</string>
+    <string name="visor_cerrar">Cerrar</string>
+    <string name="visor_ampliar">Ampliar la demostración</string>
+    <string name="visor_ayuda">Pellizca para ampliar. Toca para pausar.</string>
+
+    <!-- Registro de series -->
+    <string name="error_peso">Entre 0 y 1000 kg</string>
+    <string name="error_repeticiones">Entre 1 y 999</string>
+    <string name="serie_eliminar_titulo">¿Eliminar la serie %1$d?</string>
+    <string name="serie_eliminar_mensaje">Se borrarán su peso y sus repeticiones. Esta acción no se puede deshacer.</string>
+    <string name="accion_eliminar">Eliminar</string>
+    <string name="accion_cancelar">Cancelar</string>
+
+    <!-- Formatos -->
+    <string name="formato_peso">%1$s %2$s</string>
+    <string name="formato_serie">%1$s × %2$d</string>
+    <string name="formato_solo_repeticiones">%1$d repeticiones</string>
+    <string name="formato_linea_serie">Serie %1$d: %2$s</string>
+    <string name="formato_musculo_equipo">%1$s · %2$s</string>
+    <string name="formato_mes_anio">%1$s %2$d</string>
+
+    <!-- Unidades -->
+    <string name="unidad_kg">kg</string>
+    <string name="unidad_lb">lb</string>
+
+    <!-- Temporizador -->
+    <string name="temporizador_en_curso">Descanso</string>
+    <string name="temporizador_en_pausa">Descanso en pausa</string>
+    <string name="temporizador_terminado">Descanso terminado</string>
+    <string name="temporizador_pausar">Pausar</string>
+    <string name="temporizador_reanudar">Reanudar</string>
+    <string name="temporizador_sumar">+%1$d s</string>
+    <string name="temporizador_restar">−%1$d s</string>
+    <string name="temporizador_omitir">Omitir</string>
+    <string name="temporizador_cerrar">Cerrar</string>
+
+    <!-- Calendario y progreso -->
+    <string name="pestana_calendario">Calendario</string>
+    <string name="pestana_progreso">Progreso</string>
+    <string name="calendario_racha">Racha actual</string>
+    <string name="calendario_entrenamientos_mes">Entrenamientos del mes</string>
+    <string name="calendario_mes_anterior">Mes anterior</string>
+    <string name="calendario_mes_siguiente">Mes siguiente</string>
+    <string name="calendario_dia">Día %1$d</string>
+    <string name="calendario_dia_entrenado">Día %1$d, con entrenamiento</string>
+    <string name="progreso_ejercicio">Ejercicio</string>
+    <string name="rango_30_dias">30 días</string>
+    <string name="rango_90_dias">90 días</string>
+    <string name="rango_todo">Todo</string>
+    <string name="grafica_peso_maximo">Peso máximo por sesión (%1$s)</string>
+    <string name="grafica_volumen">Volumen por sesión (%1$s × repeticiones)</string>
+    <string name="record_peso_maximo">Peso máximo</string>
+    <string name="record_mayor_volumen">Mayor volumen en una sesión</string>
+    <string name="record_1rm">1RM estimado</string>
+
+    <!-- Estados vacíos -->
+    <string name="vacio_progreso_titulo">Aún no hay progreso que mostrar</string>
+    <string name="vacio_progreso_mensaje">Completa series con peso en un ejercicio y aquí verás sus gráficas y récords.</string>
+    <string name="grafica_sin_sesiones">Sin sesiones en este rango de fechas</string>
+    <string name="vacio_favoritos_titulo">Aún no tienes favoritos</string>
+    <string name="vacio_favoritos_mensaje">Toca el corazón de un ejercicio para guardarlo aquí.</string>
+    <string name="vacio_resultados_titulo">Sin resultados</string>
+    <string name="vacio_resultados_mensaje">Prueba con otra búsqueda o quita algunos filtros.</string>
+    <string name="vacio_series_titulo">Sin series registradas hoy</string>
+    <string name="vacio_series_mensaje">Agrega tu primera serie para empezar.</string>
+    <string name="vacio_dia_titulo">Día sin entrenamiento</string>
+    <string name="vacio_dia_mensaje">No hay series registradas en esta fecha.</string>
+
+    <!-- Ajustes -->
+    <string name="ajustes_apariencia">Apariencia</string>
+    <string name="ajustes_tema">Tema</string>
+    <string name="tema_sistema">Sistema</string>
+    <string name="tema_claro">Claro</string>
+    <string name="tema_oscuro">Oscuro</string>
+    <string name="ajustes_entrenamiento">Entrenamiento</string>
+    <string name="ajustes_unidades">Unidades de peso</string>
+    <string name="ajustes_descanso">Descanso por defecto</string>
+    <string name="ajustes_descanso_detalle">Duración: %1$s</string>
+    <string name="ajustes_segundos">Segundos</string>
+    <string name="ajustes_aviso_descanso">Al terminar el descanso</string>
+    <string name="ajustes_sonido">Sonido</string>
+    <string name="ajustes_sonido_detalle">Reproducir un aviso sonoro</string>
+    <string name="ajustes_vibracion">Vibración</string>
+    <string name="ajustes_vibracion_detalle">Vibrar el teléfono</string>
+    <string name="ajustes_acerca_de">Acerca de</string>
+    <string name="ajustes_acerca_titulo">Acerca de Gym Guía</string>
+    <string name="ajustes_acerca_detalle">Versión, créditos y privacidad</string>
+    <string name="ajustes_datos">Datos</string>
+    <string name="ajustes_borrar_historial">Borrar historial</string>
+    <string name="ajustes_borrar_historial_detalle">Elimina tus sesiones y series. Los favoritos se conservan.</string>
+    <string name="ajustes_historial_borrado">Historial borrado</string>
+    <string name="error_descanso">Entre %1$d y %2$d segundos</string>
+    <string name="accion_continuar">Continuar</string>
+    <string name="borrar_primera_titulo">¿Borrar todo el historial?</string>
+    <string name="borrar_primera_mensaje">Se eliminarán todas tus sesiones y series registradas. El calendario, las gráficas y los récords quedarán vacíos. Tus favoritos se conservan.</string>
+    <string name="borrar_segunda_titulo">Esta acción no se puede deshacer</string>
+    <string name="borrar_segunda_mensaje">Es el último aviso: tu historial de entrenamientos se perderá para siempre. ¿Quieres borrarlo de todos modos?</string>
+
+    <!-- Acerca de -->
+    <string name="acerca_creditos">Créditos</string>
+    <string name="acerca_dataset_titulo">Ejercicios e imágenes</string>
+    <string name="acerca_dataset_texto">Los ejercicios, sus instrucciones y sus imágenes vienen del proyecto free-exercise-db, de dominio público (licencia Unlicense). Gracias a sus autores y colaboradores por compartirlo.</string>
+    <string name="acerca_exercisedb_titulo">Animaciones de los ejercicios</string>
+    <string name="acerca_exercisedb_texto">Las animaciones en GIF vienen de ExerciseDB (exercisedb.dev). Se usan solo para uso personal; antes de compartir o publicar la app hay que revisar sus términos de uso.</string>
+    <string name="acerca_wger_titulo">Mapa muscular</string>
+    <string name="acerca_wger_texto">La figura del cuerpo y los diagramas de músculos son del proyecto wger (wger.de), con licencia Creative Commons BY-SA. Gracias a sus autores. Cuando wger no tiene un músculo, la app usa un diagrama propio.</string>
+    <string name="acerca_traduccion_titulo">Traducción al español</string>
+    <string name="acerca_traduccion_texto">Los nombres se tradujeron a mano y las instrucciones con traducción automática revisada. Puede haber frases torpes o errores.</string>
+    <string name="acerca_privacidad">Privacidad</string>
+    <string name="acerca_privacidad_titulo">Todo se queda en tu teléfono</string>
+    <string name="acerca_privacidad_texto">La app no usa internet, no pide cuentas y no envía datos a ningún lado. Tu historial, tus favoritos y tus ajustes se guardan solo en este dispositivo.</string>
+    <string name="ajustes_version">Versión %1$s</string>
+    <string name="ajustes_version_desconocida">1.0.0</string>
+    <string name="ajustes_descripcion_app">Guía de ejercicios de gimnasio con registro de series, descanso y progreso. Funciona sin internet y sin cuentas.</string>
+    <string name="ajustes_creditos">Ejercicios e imágenes: proyecto free-exercise-db (dominio público). Gracias a sus autores y colaboradores.</string>
+
+    <!-- Plurales -->
+    <plurals name="cantidad_ejercicios">
+        <item quantity="one">%1$d ejercicio</item>
+        <item quantity="many">%1$d ejercicios</item>
+        <item quantity="other">%1$d ejercicios</item>
+    </plurals>
+    <plurals name="cantidad_ejercicios_guardados">
+        <item quantity="one">%1$d ejercicio guardado</item>
+        <item quantity="many">%1$d ejercicios guardados</item>
+        <item quantity="other">%1$d ejercicios guardados</item>
+    </plurals>
+    <plurals name="cantidad_resultados">
+        <item quantity="one">%1$d resultado</item>
+        <item quantity="many">%1$d resultados</item>
+        <item quantity="other">%1$d resultados</item>
+    </plurals>
+    <plurals name="cantidad_dias">
+        <item quantity="one">%1$d día</item>
+        <item quantity="many">%1$d días</item>
+        <item quantity="other">%1$d días</item>
+    </plurals>
+</resources>

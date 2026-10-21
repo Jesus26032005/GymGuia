@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Imagen de ejemplo (Fase 1): posición inicial del movimiento. Se reemplaza por las fotos reales en la Fase 2. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="200dp"
+    android:viewportWidth="320"
+    android:viewportHeight="200">
+    <path android:fillColor="@color/demo_fondo" android:pathData="M0,0h320v200h-320z" />
+    <!-- Cabeza -->
+    <path android:fillColor="@color/demo_figura" android:pathData="M160,52m-14,0a14,14 0,1 1,28 0a14,14 0,1 1,-28 0" />
+    <!-- Tronco y piernas -->
+    <path android:strokeColor="@color/demo_figura" android:strokeWidth="8" android:strokeLineCap="round" android:pathData="M160,68L160,130M160,130L140,180M160,130L180,180" />
+    <!-- Brazos abajo -->
+    <path android:strokeColor="@color/demo_figura" android:strokeWidth="7" android:strokeLineCap="round" android:pathData="M160,80L130,110M160,80L190,110" />
+    <!-- Barra -->
+    <path android:strokeColor="@color/demo_acento" android:strokeWidth="6" android:strokeLineCap="round" android:pathData="M100,112L220,112" />
+    <path android:fillColor="@color/demo_acento" android:pathData="M92,98h12v28h-12zM216,98h12v28h-12z" />
+</vector>
