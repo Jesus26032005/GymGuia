@@ -5,13 +5,13 @@ import androidx.compose.material3.Shapes
 import androidx.compose.ui.unit.dp
 
 /*
- * Radios de esquina de la app. Tarjetas usan "medium", etiquetas "small",
- * hojas y diálogos "extraLarge".
+ * Formas de la identidad "Placa": esquinas casi rectas, como una placa de metal.
+ * Tarjetas usan "medium", etiquetas "small", hojas y diálogos "extraLarge".
  */
 internal val Formas = Shapes(
-    extraSmall = RoundedCornerShape(4.dp),
-    small = RoundedCornerShape(8.dp),
-    medium = RoundedCornerShape(14.dp),
-    large = RoundedCornerShape(20.dp),
-    extraLarge = RoundedCornerShape(28.dp),
+    extraSmall = RoundedCornerShape(2.dp),
+    small = RoundedCornerShape(4.dp),
+    medium = RoundedCornerShape(6.dp),
+    large = RoundedCornerShape(8.dp),
+    extraLarge = RoundedCornerShape(12.dp),
 )

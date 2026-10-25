@@ -46,7 +46,11 @@
     <string name="filtro_nivel">Nivel</string>
 
     <!-- Inicio -->
-    <string name="inicio_saludo">¿Qué vas a entrenar hoy?</string>
+    <string name="inicio_semana">Esta semana</string>
+    <string name="semana_dia_entrenado">%1$s: entrenado</string>
+    <string name="semana_dia_sin_entrenar">%1$s: sin entrenar</string>
+    <string name="inicio_pregunta">¿Qué vas a</string>
+    <string name="inicio_pregunta_destacada">entrenar hoy?</string>
     <string name="inicio_grupos_musculares">Grupos musculares</string>
     <string name="inicio_sugeridos">Sugeridos</string>
 
@@ -230,6 +234,10 @@
         <item quantity="one">%1$d resultado</item>
         <item quantity="many">%1$d resultados</item>
         <item quantity="other">%1$d resultados</item>
+    </plurals>
+    <plurals name="dias_entrenados_semana">
+        <item quantity="one">%d día entrenado</item>
+        <item quantity="other">%d días entrenados</item>
     </plurals>
     <plurals name="cantidad_dias">
         <item quantity="one">%1$d día</item>

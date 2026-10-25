@@ -86,7 +86,7 @@ fun TarjetaTemporizador(
                     )
                     Text(
                         text = formatearTiempo(estado.segundosRestantes),
-                        style = MaterialTheme.typography.headlineMedium,
+                        style = MaterialTheme.typography.displaySmall,
                     )
                 }
                 if (terminado) {

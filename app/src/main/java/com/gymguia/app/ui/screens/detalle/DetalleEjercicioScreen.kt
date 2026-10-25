@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
@@ -203,11 +204,11 @@ fun DetalleEjercicioScreen(
             item {
                 Row(horizontalArrangement = Arrangement.spacedBy(esp.m)) {
                     // La nueva serie copia peso y repeticiones de la anterior (lo decide el repositorio).
-                    OutlinedButton(onClick = onAgregarSerie, modifier = Modifier.weight(1f)) {
+                    OutlinedButton(onClick = onAgregarSerie, shape = MaterialTheme.shapes.medium, modifier = Modifier.weight(1f).heightIn(min = MaterialTheme.espaciado.alturaBotonPrincipal)) {
                         Icon(Icons.Filled.Add, contentDescription = null)
                         Text(stringResource(R.string.accion_agregar_serie), modifier = Modifier.padding(start = esp.s))
                     }
-                    Button(onClick = onIniciarDescanso, modifier = Modifier.weight(1f)) {
+                    Button(onClick = onIniciarDescanso, shape = MaterialTheme.shapes.medium, modifier = Modifier.weight(1f).heightIn(min = MaterialTheme.espaciado.alturaBotonPrincipal)) {
                         Icon(Icons.Outlined.Timer, contentDescription = null)
                         Text(stringResource(R.string.accion_iniciar_descanso), modifier = Modifier.padding(start = esp.s))
                     }

@@ -1,6 +1,8 @@
 package com.gymguia.app.data.ejemplo
 
 import com.gymguia.app.R
+import com.gymguia.app.domain.util.diasDeLaSemana
+import com.gymguia.app.ui.screens.inicio.DiaSemanaUi
 import com.gymguia.app.domain.model.Ejercicio
 import com.gymguia.app.domain.model.EjercicioDeSesion
 import com.gymguia.app.domain.model.ConteoValor
@@ -24,6 +26,11 @@ import com.gymguia.app.ui.screens.progreso.GraficasUi
  * Las series y el estado del calendario y de Progreso son solo para vistas previas.
  */
 object DatosEjemplo {
+
+    /** Semana de ejemplo para las vistas previas: lunes, miércoles y jueves entrenados, hoy viernes. */
+    val semana: List<DiaSemanaUi> = diasDeLaSemana(LocalDate.of(2026, 10, 23)).let { dias ->
+        dias.map { DiaSemanaUi(it, entrenado = it.dayOfWeek.value in setOf(1, 3, 4), esHoy = it.dayOfWeek.value == 5) }
+    }
 
     private val imagenesDemo = listOf(R.drawable.demo_ejemplo_1, R.drawable.demo_ejemplo_2)
 

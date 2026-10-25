@@ -9,82 +9,82 @@ import androidx.compose.ui.graphics.Color
 /*
  * Paleta de Gym Guía.
  *
- * Idea general: un verde azulado (teal) sobrio como color principal, un azul pizarra como
- * secundario y un ámbar apagado como acento (récords, temporizador terminado).
- * Las superficies son grises ligeramente fríos para que se distingan entre sí sin usar
- * blanco ni negro puros. Todos los pares "fondo / texto" cumplen contraste AA (4.5:1).
+ * Identidad "Placa": grafito (fondo), amarillo de seguridad (acción y números clave) y tiza
+ * (texto). En modo claro el papel es tiza y la acción principal es grafito con detalles en
+ * amarillo, porque el amarillo no tiene contraste suficiente como texto sobre claro.
+ * Todos los pares "fondo / texto" cumplen contraste AA (4.5:1).
  *
  * Este es el ÚNICO archivo donde se escriben valores de color. Las pantallas siempre
  * leen MaterialTheme.colorScheme o MaterialTheme.extra.
  */
 
-// ---------- Modo claro ----------
-private val ClaroPrimario = Color(0xFF1F6F6B)
-private val ClaroSobrePrimario = Color(0xFFFFFFFF)
-private val ClaroPrimarioContenedor = Color(0xFFCDE8E5)
-private val ClaroSobrePrimarioContenedor = Color(0xFF0B2F2D)
-private val ClaroSecundario = Color(0xFF4A5F7A)
+// ---------- Modo claro: tiza y grafito ----------
+private val ClaroPrimario = Color(0xFF17191C)
+private val ClaroSobrePrimario = Color(0xFFF2C230)
+private val ClaroPrimarioContenedor = Color(0xFFF2C230)
+private val ClaroSobrePrimarioContenedor = Color(0xFF17191C)
+private val ClaroSecundario = Color(0xFF4A4D52)
 private val ClaroSobreSecundario = Color(0xFFFFFFFF)
-private val ClaroSecundarioContenedor = Color(0xFFDCE4EF)
-private val ClaroSobreSecundarioContenedor = Color(0xFF1B2838)
-private val ClaroTerciario = Color(0xFF8A5310)
+private val ClaroSecundarioContenedor = Color(0xFFF2C230)
+private val ClaroSobreSecundarioContenedor = Color(0xFF17191C)
+private val ClaroTerciario = Color(0xFF7A5C00)
 private val ClaroSobreTerciario = Color(0xFFFFFFFF)
-private val ClaroTerciarioContenedor = Color(0xFFF6E1C5)
-private val ClaroSobreTerciarioContenedor = Color(0xFF2E1A00)
+private val ClaroTerciarioContenedor = Color(0xFFFBE7A6)
+private val ClaroSobreTerciarioContenedor = Color(0xFF2B2000)
 private val ClaroError = Color(0xFFB3261E)
 private val ClaroSobreError = Color(0xFFFFFFFF)
 private val ClaroErrorContenedor = Color(0xFFF9DEDC)
 private val ClaroSobreErrorContenedor = Color(0xFF410E0B)
-private val ClaroFondo = Color(0xFFF6F7F8)
-private val ClaroSobreFondo = Color(0xFF191C1D)
-private val ClaroSuperficie = Color(0xFFF6F7F8)
-private val ClaroSobreSuperficie = Color(0xFF191C1D)
-private val ClaroSuperficieVariante = Color(0xFFDDE3E4)
-private val ClaroSobreSuperficieVariante = Color(0xFF40484A)
-private val ClaroContenedorMasBajo = Color(0xFFFFFFFF)
-private val ClaroContenedorBajo = Color(0xFFF0F2F3)
-private val ClaroContenedor = Color(0xFFEAEEEF)
-private val ClaroContenedorAlto = Color(0xFFE4E9EA)
-private val ClaroContenedorMasAlto = Color(0xFFDEE3E4)
-private val ClaroContorno = Color(0xFF6F797A)
-private val ClaroContornoVariante = Color(0xFFC6CDCE)
-private val ClaroInversoSuperficie = Color(0xFF2D3132)
-private val ClaroInversoSobreSuperficie = Color(0xFFEFF1F1)
-private val ClaroInversoPrimario = Color(0xFF7FD1CB)
+private val ClaroFondo = Color(0xFFF1EEE6)
+private val ClaroSobreFondo = Color(0xFF17191C)
+private val ClaroSuperficie = Color(0xFFF1EEE6)
+private val ClaroSobreSuperficie = Color(0xFF17191C)
+private val ClaroSuperficieVariante = Color(0xFFDDD9CE)
+private val ClaroSobreSuperficieVariante = Color(0xFF45474B)
+private val ClaroContenedorMasBajo = Color(0xFFFAF8F3)
+private val ClaroContenedorBajo = Color(0xFFE9E5DA)
+private val ClaroContenedor = Color(0xFFE3DFD3)
+private val ClaroContenedorAlto = Color(0xFFDCD8CB)
+private val ClaroContenedorMasAlto = Color(0xFFD4D0C2)
+private val ClaroContorno = Color(0xFF6C6F73)
+private val ClaroContornoVariante = Color(0xFFC4C0B3)
+private val ClaroInversoSuperficie = Color(0xFF17191C)
+private val ClaroInversoSobreSuperficie = Color(0xFFECE8DF)
+private val ClaroInversoPrimario = Color(0xFFF2C230)
 
-// ---------- Modo oscuro (sin negro puro) ----------
-private val OscuroPrimario = Color(0xFF7FD1CB)
-private val OscuroSobrePrimario = Color(0xFF003735)
-private val OscuroPrimarioContenedor = Color(0xFF00504D)
-private val OscuroSobrePrimarioContenedor = Color(0xFFBCECE7)
-private val OscuroSecundario = Color(0xFFAFC6E4)
-private val OscuroSobreSecundario = Color(0xFF19304A)
-private val OscuroSecundarioContenedor = Color(0xFF33475F)
-private val OscuroSobreSecundarioContenedor = Color(0xFFD5E3F7)
-private val OscuroTerciario = Color(0xFFF1BE7E)
-private val OscuroSobreTerciario = Color(0xFF462A00)
-private val OscuroTerciarioContenedor = Color(0xFF5E3F0E)
-private val OscuroSobreTerciarioContenedor = Color(0xFFFFDDB5)
+// ---------- Modo oscuro: grafito y amarillo de seguridad ----------
+private val OscuroPrimario = Color(0xFFF2C230)
+private val OscuroSobrePrimario = Color(0xFF17191C)
+private val OscuroPrimarioContenedor = Color(0xFF4A3F10)
+private val OscuroSobrePrimarioContenedor = Color(0xFFFBE7A6)
+private val OscuroSecundario = Color(0xFFECE8DF)
+private val OscuroSobreSecundario = Color(0xFF17191C)
+private val OscuroSecundarioContenedor = Color(0xFFF2C230)
+private val OscuroSobreSecundarioContenedor = Color(0xFF17191C)
+private val OscuroTerciario = Color(0xFFF2C230)
+private val OscuroSobreTerciario = Color(0xFF17191C)
+private val OscuroTerciarioContenedor = Color(0xFF4A3F10)
+private val OscuroSobreTerciarioContenedor = Color(0xFFFBE7A6)
 private val OscuroError = Color(0xFFF2B8B5)
 private val OscuroSobreError = Color(0xFF601410)
 private val OscuroErrorContenedor = Color(0xFF8C1D18)
 private val OscuroSobreErrorContenedor = Color(0xFFF9DEDC)
-private val OscuroFondo = Color(0xFF111416)
-private val OscuroSobreFondo = Color(0xFFE1E3E4)
-private val OscuroSuperficie = Color(0xFF111416)
-private val OscuroSobreSuperficie = Color(0xFFE1E3E4)
-private val OscuroSuperficieVariante = Color(0xFF3F484A)
-private val OscuroSobreSuperficieVariante = Color(0xFFBFC8C9)
-private val OscuroContenedorMasBajo = Color(0xFF0C0F10)
-private val OscuroContenedorBajo = Color(0xFF191C1E)
-private val OscuroContenedor = Color(0xFF1D2123)
-private val OscuroContenedorAlto = Color(0xFF272B2D)
-private val OscuroContenedorMasAlto = Color(0xFF323638)
-private val OscuroContorno = Color(0xFF899293)
-private val OscuroContornoVariante = Color(0xFF3F484A)
-private val OscuroInversoSuperficie = Color(0xFFE1E3E4)
-private val OscuroInversoSobreSuperficie = Color(0xFF2D3132)
-private val OscuroInversoPrimario = Color(0xFF1F6F6B)
+private val OscuroFondo = Color(0xFF17191C)
+private val OscuroSobreFondo = Color(0xFFECE8DF)
+private val OscuroSuperficie = Color(0xFF17191C)
+private val OscuroSobreSuperficie = Color(0xFFECE8DF)
+private val OscuroSuperficieVariante = Color(0xFF2A2D31)
+private val OscuroSobreSuperficieVariante = Color(0xFFB5B2AA)
+private val OscuroContenedorMasBajo = Color(0xFF101214)
+private val OscuroContenedorBajo = Color(0xFF1D2024)
+private val OscuroContenedor = Color(0xFF212428)
+private val OscuroContenedorAlto = Color(0xFF2A2D31)
+private val OscuroContenedorMasAlto = Color(0xFF34383D)
+private val OscuroContorno = Color(0xFF8B8F94)
+private val OscuroContornoVariante = Color(0xFF3A3E43)
+private val OscuroInversoSuperficie = Color(0xFFECE8DF)
+private val OscuroInversoSobreSuperficie = Color(0xFF17191C)
+private val OscuroInversoPrimario = Color(0xFF17191C)
 
 /** Esquema de color Material 3 para el modo claro. */
 internal val EsquemaClaro = lightColorScheme(
@@ -180,7 +180,7 @@ internal val ExtraClaro = ColoresExtra(
     principiante = ColorEtiqueta(fondo = Color(0xFFD6EFD8), texto = Color(0xFF0F3D17)),
     intermedio = ColorEtiqueta(fondo = Color(0xFFFBE8B8), texto = Color(0xFF4A3300)),
     avanzado = ColorEtiqueta(fondo = Color(0xFFF8D7D3), texto = Color(0xFF5C130C)),
-    completada = ColorEtiqueta(fondo = Color(0xFF2E7D4F), texto = Color(0xFFFFFFFF)),
+    completada = ColorEtiqueta(fondo = Color(0xFF17191C), texto = Color(0xFFF2C230)),
     lienzoMapa = Color(0xFFFFFFFF),
 )
 
@@ -188,7 +188,7 @@ internal val ExtraOscuro = ColoresExtra(
     principiante = ColorEtiqueta(fondo = Color(0xFF1F4A2A), texto = Color(0xFFB9EBC0)),
     intermedio = ColorEtiqueta(fondo = Color(0xFF5A4300), texto = Color(0xFFFFDF9E)),
     avanzado = ColorEtiqueta(fondo = Color(0xFF6B2018), texto = Color(0xFFFFD5CF)),
-    completada = ColorEtiqueta(fondo = Color(0xFF7ED79B), texto = Color(0xFF00391B)),
+    completada = ColorEtiqueta(fondo = Color(0xFFF2C230), texto = Color(0xFF17191C)),
     lienzoMapa = Color(0xFFFFFFFF),
 )
 

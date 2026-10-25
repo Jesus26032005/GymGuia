@@ -47,7 +47,7 @@ fun BarraBusqueda(
             }
         },
         singleLine = true,
-        shape = MaterialTheme.shapes.extraLarge,
+        shape = MaterialTheme.shapes.medium,
         // Botón "buscar" del teclado.
         keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
         keyboardActions = KeyboardActions(onSearch = { onBuscar(consulta) }),

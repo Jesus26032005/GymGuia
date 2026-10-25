@@ -57,7 +57,9 @@ fun GymGuiaNavHost(
             val musculos by vm.musculos.collectAsStateWithLifecycle()
             val sugeridos by vm.sugeridos.collectAsStateWithLifecycle()
             val favoritos by vm.favoritos.collectAsStateWithLifecycle()
+            val semana by vm.semana.collectAsStateWithLifecycle()
             InicioScreen(
+                semana = semana,
                 musculos = musculos,
                 sugeridos = sugeridos,
                 favoritos = favoritos,

@@ -2,10 +2,10 @@
 <resources>
     <!-- Solo colores para recursos XML (ventana, ícono y dibujos de ejemplo).
          Los colores de la interfaz viven en ui/theme/Color.kt. -->
-    <color name="ventana_fondo">#FFF6F7F8</color>
-    <color name="icono_fondo">#FF1F6F6B</color>
-    <color name="icono_trazo">#FFFFFFFF</color>
+    <color name="ventana_fondo">#FFF1EEE6</color>
+    <color name="icono_fondo">#FF17191C</color>
+    <color name="icono_trazo">#FFF2C230</color>
     <color name="demo_fondo">#FFE3E8EA</color>
     <color name="demo_figura">#FF40484A</color>
-    <color name="demo_acento">#FF1F6F6B</color>
+    <color name="demo_acento">#FF17191C</color>
 </resources>

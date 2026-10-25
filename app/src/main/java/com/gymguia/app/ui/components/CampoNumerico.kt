@@ -8,8 +8,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -30,6 +29,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.res.stringResource
@@ -95,82 +95,81 @@ fun CampoNumerico(
             style = MaterialTheme.typography.labelMedium,
             color = colores.onSurfaceVariant,
         )
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(esp.xs),
-        ) {
-            FilledTonalIconButton(
+        // El número es lo más importante de la pantalla: va grande y centrado.
+        BasicTextField(
+            value = texto,
+            onValueChange = { nuevo ->
+                val patron = if (permiteDecimales) PatronDecimal else PatronEntero
+                if (nuevo.length <= LARGO_MAXIMO_TEXTO && nuevo.matches(patron)) {
+                    texto = nuevo
+                    // Solo se avisa del cambio si el texto es un número válido.
+                    nuevo.replace(',', '.').toDoubleOrNull()
+                        ?.takeIf { it in minimo..maximo }
+                        ?.let(onValorChange)
+                }
+            },
+            modifier = Modifier
+                .fillMaxWidth()
+                .onFocusChanged { estado ->
+                    enfocado = estado.isFocused
+                    // Al salir con un texto inválido se vuelve al último valor guardado.
+                    if (!estado.isFocused && invalido) texto = formatearNumero(valor)
+                }
+                .semantics { if (invalido) error(mensajeError) },
+            textStyle = MaterialTheme.typography.displaySmall.copy(
+                color = if (invalido) colores.error else colores.onSurface,
+                textAlign = TextAlign.Center,
+            ),
+            singleLine = true,
+            keyboardOptions = KeyboardOptions(
+                keyboardType = if (permiteDecimales) KeyboardType.Decimal else KeyboardType.Number,
+                imeAction = ImeAction.Done,
+            ),
+            // La tecla "listo" cierra la edición: si el texto era inválido, vuelve al último valor.
+            keyboardActions = KeyboardActions(onDone = { gestorFoco.clearFocus() }),
+            cursorBrush = SolidColor(colores.primary),
+            decorationBox = { campo ->
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(esp.alturaCampoNumerico)
+                        .background(
+                            if (invalido) colores.errorContainer else colores.surfaceContainerHighest,
+                            MaterialTheme.shapes.small,
+                        )
+                        .then(
+                            if (invalido) Modifier.border(esp.bordeFino, colores.error, MaterialTheme.shapes.small)
+                            else Modifier,
+                        )
+                        .padding(horizontal = esp.s),
+                    contentAlignment = Alignment.Center,
+                ) { campo() }
+            },
+        )
+        // Botones grandes debajo del número, uno junto al otro, para pulsarlos con el pulgar.
+        Row(horizontalArrangement = Arrangement.spacedBy(esp.xs)) {
+            BotonPaso(
+                icono = Icons.Filled.Remove,
+                descripcion = stringResource(R.string.accion_restar, etiqueta),
+                habilitado = valor > minimo,
                 onClick = {
                     val nuevo = (valor - paso).coerceAtLeast(minimo)
                     texto = formatearNumero(nuevo)
                     onValorChange(nuevo)
                 },
-                enabled = valor > minimo,
-                modifier = Modifier.size(esp.botonCampoNumerico),
-            ) {
-                Icon(Icons.Filled.Remove, contentDescription = stringResource(R.string.accion_restar, etiqueta))
-            }
-            BasicTextField(
-                value = texto,
-                onValueChange = { nuevo ->
-                    val patron = if (permiteDecimales) PatronDecimal else PatronEntero
-                    if (nuevo.length <= LARGO_MAXIMO_TEXTO && nuevo.matches(patron)) {
-                        texto = nuevo
-                        // Solo se avisa del cambio si el texto es un número válido.
-                        nuevo.replace(',', '.').toDoubleOrNull()
-                            ?.takeIf { it in minimo..maximo }
-                            ?.let(onValorChange)
-                    }
-                },
-                modifier = Modifier
-                    .weight(1f)
-                    .widthIn(min = esp.anchoMinimoCampo)
-                    .onFocusChanged { estado ->
-                        enfocado = estado.isFocused
-                        // Al salir con un texto inválido se vuelve al último valor guardado.
-                        if (!estado.isFocused && invalido) texto = formatearNumero(valor)
-                    }
-                    .semantics { if (invalido) error(mensajeError) },
-                textStyle = MaterialTheme.typography.titleMedium.copy(
-                    color = if (invalido) colores.error else colores.onSurface,
-                    textAlign = TextAlign.Center,
-                ),
-                singleLine = true,
-                keyboardOptions = KeyboardOptions(
-                    keyboardType = if (permiteDecimales) KeyboardType.Decimal else KeyboardType.Number,
-                    imeAction = ImeAction.Done,
-                ),
-                // La tecla "listo" cierra la edición: si el texto era inválido, vuelve al último valor.
-                keyboardActions = KeyboardActions(onDone = { gestorFoco.clearFocus() }),
-                cursorBrush = SolidColor(colores.primary),
-                decorationBox = { campo ->
-                    Box(
-                        modifier = Modifier
-                            .height(esp.alturaCampoNumerico)
-                            .background(
-                                if (invalido) colores.errorContainer else colores.surfaceContainerHighest,
-                                MaterialTheme.shapes.small,
-                            )
-                            .then(
-                                if (invalido) Modifier.border(esp.bordeFino, colores.error, MaterialTheme.shapes.small)
-                                else Modifier,
-                            )
-                            .padding(horizontal = esp.s),
-                        contentAlignment = Alignment.Center,
-                    ) { campo() }
-                },
+                modifier = Modifier.weight(1f),
             )
-            FilledTonalIconButton(
+            BotonPaso(
+                icono = Icons.Filled.Add,
+                descripcion = stringResource(R.string.accion_sumar, etiqueta),
+                habilitado = valor < maximo,
                 onClick = {
                     val nuevo = (valor + paso).coerceAtMost(maximo)
                     texto = formatearNumero(nuevo)
                     onValorChange(nuevo)
                 },
-                enabled = valor < maximo,
-                modifier = Modifier.size(esp.botonCampoNumerico),
-            ) {
-                Icon(Icons.Filled.Add, contentDescription = stringResource(R.string.accion_sumar, etiqueta))
-            }
+                modifier = Modifier.weight(1f),
+            )
         }
         // El aviso ocupa su lugar solo cuando hay un error, para que la fila no "salte" al escribir bien.
         if (invalido && mensajeError.isNotEmpty()) {
@@ -180,6 +179,25 @@ fun CampoNumerico(
                 color = colores.error,
             )
         }
+    }
+}
+
+/** Botón de menos o más del campo numérico: rectangular y ancho, fácil de acertar con el pulgar. */
+@Composable
+private fun BotonPaso(
+    icono: ImageVector,
+    descripcion: String,
+    habilitado: Boolean,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    FilledTonalIconButton(
+        onClick = onClick,
+        enabled = habilitado,
+        shape = MaterialTheme.shapes.small,
+        modifier = modifier.height(MaterialTheme.espaciado.botonCampoNumerico),
+    ) {
+        Icon(icono, contentDescription = descripcion)
     }
 }
 

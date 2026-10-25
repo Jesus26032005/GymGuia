@@ -33,15 +33,19 @@ data class Espaciado(
 
     // Controles.
     val alturaMinimaTactil: Dp = 48.dp,
-    val botonCampoNumerico: Dp = 40.dp,
-    val alturaCampoNumerico: Dp = 40.dp,
-    val anchoMinimoCampo: Dp = 56.dp,
+    val botonCampoNumerico: Dp = 48.dp,
+    val alturaCampoNumerico: Dp = 60.dp,
+    val alturaBotonPrincipal: Dp = 56.dp,
     val alturaBarraBusqueda: Dp = 56.dp,
 
     // Imágenes.
     val miniaturaEjercicio: Dp = 72.dp,
     val alturaDemo: Dp = 240.dp,
     val alturaMapaMuscular: Dp = 280.dp,
+
+    // Semana de Inicio (discos).
+    val discoSemana: Dp = 36.dp,
+    val anilloDisco: Dp = 7.dp,
 
     // Calendario.
     val marcaDiaEntrenado: Dp = 5.dp,

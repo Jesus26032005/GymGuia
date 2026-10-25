@@ -101,7 +101,7 @@ fun GymGuiaApp(
                         )
                     }
                 }
-                NavigationBar {
+                NavigationBar(containerColor = MaterialTheme.colorScheme.surfaceContainerLowest) {
                     DestinoInferior.entries.forEach { destino ->
                         // Una pestaña está activa si la ruta actual (sin parámetros) coincide.
                         // "Acerca de" se abre desde Ajustes, así que la pestaña de Ajustes sigue marcada.
